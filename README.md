@@ -12,6 +12,7 @@
 ### 방식
 
 * 일주일에 1번 코드리뷰 및 어려운 점을 공유
+  
   * 어렵다고 생각했던 문제에 대해서 질문 및 답변
 * 일주일 총 10문제 (21-01-18 현재 기준)
 * Git에 각자 폴더에 올리기
@@ -26,23 +27,31 @@
 
 #### Git Pull Request
 
-1. Init
-   * `git clone https://github.com/SunivAlgo/Algorithm.git`
-   * Clone 시 main(master)에 있는 파일을 복사함
-2. Branch 추가
-   * `git checkout -b [자기이름]`
-3. add
+Init
+* `git clone https://github.com/SunivAlgo/Algorithm.git`
+* Clone 시 main(master)에 있는 파일을 복사함
+
+Branch 추가
+
+* `git checkout -b [자기이름]`
+
+
+
+1. pull
+   * `git pull origin main`
+     * 해당 코드는 `main` Branch를 받아온다.
+2. add
    * `git add .` 
      * `.` 은 버전관리할 파일 전부를 의미함
-4. commit
+3. commit
    * `git commit -m [커밋메시지]`
-5. Push
+4. Push
    * `git push origin [Branch]`
-6. 관리자가 PR(Pull Request)
+5. 관리자가 PR(Pull Request) -> merge
 
 
 
-> 전체 파일을 받아보고 싶다면 `git pull` 수행
+-전체 파일이 있는게 정상임-
 
 
 
