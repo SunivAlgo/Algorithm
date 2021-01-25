@@ -27,19 +27,19 @@
 
 #### Git Pull Request
 
-Init
+**Init**
+
 * `git clone https://github.com/SunivAlgo/Algorithm.git`
 * Clone 시 main(master)에 있는 파일을 복사함
 
-Branch 추가
+**Branch 추가**
 
 * `git checkout -b [자기이름]`
 
+**내용 추가**
 
-
-1. pull
-   * `git pull origin main`
-     * 해당 코드는 `main` Branch를 받아온다.
+1. Change Branch
+   * `git checkout [Branch]`
 2. add
    * `git add .` 
      * `.` 은 버전관리할 파일 전부를 의미함
@@ -47,11 +47,15 @@ Branch 추가
    * `git commit -m [커밋메시지]`
 4. Push
    * `git push origin [Branch]`
-5. 관리자가 PR(Pull Request) -> merge
+5. Merge
+   * `git checkout main`
+   * `git pull origin main`
+   * `git merge [Branch]`
+   * `git push origin main`
 
 
 
--전체 파일이 있는게 정상임-
+>  전체 파일이 있는게 정상입니다.
 
 
 
