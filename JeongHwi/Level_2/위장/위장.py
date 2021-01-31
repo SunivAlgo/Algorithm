@@ -1,4 +1,4 @@
-lothes = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
+clothes = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
 clothes2 = [['a','aa'],['b','aa'],['c','aa'],['a_a','bb'],['b_b','bb'],['c_c','bb'],['aaa','cc'],['bbb','cc'],['ccc','cc']]
 clothes3 = [['a','a'],['b','b'],['c','c']]
 def solution(clothes):

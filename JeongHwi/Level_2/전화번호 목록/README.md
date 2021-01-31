@@ -110,4 +110,3 @@ def solution(phone_book):
                 answer = False
     return answer
 ```
-
