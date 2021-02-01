@@ -40,18 +40,24 @@
 
 1. Change Branch
    * `git checkout [Branch]`
-2. add
+   * 이 경우는 현재 `main` 브랜치 라면 할 것
+2. 파일 추가(작업)
+3. add
    * `git add .` 
      * `.` 은 버전관리할 파일 전부를 의미함
-3. commit
-   * `git commit -m [커밋메시지]`
-4. Push
+4. commit
+   * `git commit -m "커밋메시지"`
+   * `commit message` 예시 : `[JeongHwi] 괄호 변환 update`
+5. Push
    * `git push origin [Branch]`
-5. Merge
+6. Merge
    * `git checkout main`
    * `git pull origin main`
-   * `git merge [Branch]`
+   * `git merge [Branch] -m "merge Message"`
+     * `merge message` 예시 : `[JeongHwi] 괄호 변환 Update`
    * `git push origin main`
+   * `git checkout [branch]`
+     * 다음 작업할 때 바로 add 할 수 있기 위함
 
 
 
