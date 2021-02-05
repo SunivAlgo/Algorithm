@@ -1,16 +1,18 @@
-from itertools import combinations, permutations
-def solution(orders, course):
-    answer = []
-    
+from collections import deque
+def solution(number, k):
+    right = deque(map(int,list(number)))
+    left = []
 
-    for i in range(0,len(orders)):
-        s = sorted(list(orders[i]))
-        orders[i] = ''.join(s)    
-    
-    li = set(combinations(list(orders[0]),2))
-    for i in li:
-        answer.append(''.join(sorted(list(i))))
-    print(li)
+    while right:
+        while left and right[0] > left[-1] :
+            left.pop()
+            k -= 1
+            if k <= 0:
+                left = left + list(right)
+                left = ''.join(list(map(str,left)))
+                return left
+        left.append(right.popleft())
+    left = ''.join(list(map(str,left[0 : len(left) - k])))
+    return left
 
-    return answer
-print(solution(["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"],[2,3,4]))
+print(solution("9"*1000000,999999))
