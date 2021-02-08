@@ -139,4 +139,3 @@ def solution(numbers,target):
 `+1`
 
 최대 시간 TC : 1 (`655.75ms`)
-
