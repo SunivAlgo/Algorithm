@@ -27,5 +27,6 @@ def solution(prices):
 print(solution([1, 2, 3, 2, 3]))
 
 '''
+    풀이봤음.
     1. stack에 index를 저장하는 방식으로 풀었음.
 '''
