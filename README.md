@@ -49,6 +49,7 @@
    * `git commit -m "커밋메시지"`
    * `commit message` 예시 : `[JeongHwi] 괄호 변환 update`
 5. Push
+   
    * `git push origin [Branch]`
 6. Merge
    * `git checkout main`
@@ -58,8 +59,10 @@
    * `git push origin main`
    * `git checkout [branch]`
      * 다음 작업할 때 바로 add 할 수 있기 위함
-
-
+   
+   * `git pull origin main`
+     * 이는 현재 브랜치가 내 브랜치인 경우에 해준다
+     * github에 있는 저장소와 내 로컬파일을 맞춰주기 위함
 
 >  전체 파일이 있는게 정상입니다.
 
