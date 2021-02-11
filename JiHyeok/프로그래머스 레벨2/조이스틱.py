@@ -41,7 +41,7 @@ def solution(name):
 
     return answer
     
-print(solution('AAABA'))
+print(solution('AABAAAAAAABBB'))
 
 '''
     소모시간 2시간 30분...
@@ -59,6 +59,5 @@ print(solution('AAABA'))
     2.  index를 설정하는 방법
         a.  'A'이지 않은 원소들을 모은 리스트를 추린다.
         b.  리스트[0] 과 리스트[-1]을 index_now 와 비교하여 어느쪽이 더 가까운지 계산.
-        c.   더 작은쪽과 index_now와의 거리를 구하고, 그것을 pop하는 동시에 index_now 갱신
-
+        c.   더 작은쪽과 index_now와의 거리를 구하고, 그것을 pop하는 동시에 index_now 갱신        
 '''
