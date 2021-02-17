@@ -1,5 +1,4 @@
 def solution(n):
-    
     num = bin(n).count('1')
     answer = n+1
     while True:
