@@ -65,3 +65,7 @@ Deque로 문제를 해결하였다. 처음에는 투포인터를 써야하는가
 sum이 n보다 크면 deque에서 Pop 하고, sum이 n보다 작으면 deque에 append 하고, 같으면 count 를 1 증가시키고 nlist가 비어있지 않으면 deque에 append 하면 끝
 
 > 마지막에 ans+1 을 해준 이유는 n 자신에 대해서 카운트하지 않아서 +1을 해주었다.
+
+
+
+`+3`
