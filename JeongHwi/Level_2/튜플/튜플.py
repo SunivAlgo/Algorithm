@@ -5,7 +5,6 @@ def solution(s):
     s_split = s[1:-1]
     s_set = []
     sub_ans = []
-    flag = False
     num = ""
     for c in s_split:
         if c == "{":
