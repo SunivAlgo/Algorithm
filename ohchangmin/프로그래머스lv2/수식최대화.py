@@ -21,7 +21,7 @@ def solution(expression):
             s.append(i)
             n = ""
     s.append(int(n))
-  
+    
     for i in p_operator:
         s_temp = s
         for j in i:
