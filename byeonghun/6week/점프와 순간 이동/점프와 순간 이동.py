@@ -5,7 +5,6 @@ def solution(n):
         n = n // 2
         if r == 1:
             ans += 1
-
     return ans
 
 print(solution(5000))
