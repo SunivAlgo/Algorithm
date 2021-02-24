@@ -6,5 +6,3 @@ def solution(n,a,b):
         b = math.ceil(b/2)
         answer += 1
     return answer
-
-print(solution(8, 2, 3))
