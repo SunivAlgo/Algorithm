@@ -5,7 +5,7 @@ def timeGet(start,end):
     hour = int(end_h) - int(start_h)
     minute+=hour*60
     return minute    
-import re
+
 def getMelodyList(melody):
     ml = []
     me = ""
@@ -26,25 +26,18 @@ def getMelodyList(melody):
             ml.append(melody[i])
     return ml
 
-import re
 def solution(m,musicinfos):
     ans = []
     for infos in musicinfos:
         start,end,name,melody = infos.split(',')
         time = timeGet(start,end)
         melodyList = getMelodyList(melody)
+        print(melodyList)
         totalList = ""
         for i in range(time):
             totalList+=melodyList[i%len(melodyList)]
-        # print("이전 :",totalList)
         totalList = totalList.replace(m+"#","-")
         totalList = totalList.replace(m,"!")
-        # if totalList.find(m) >= 0 :
-        #     if totalList.find(m+"#") >= 0:
-        #         continue
-        #     # print(totalList,m,tkotalList.find(m))
-        #     ans.append((name,time))
-        # print("후 ",totalList)
         if totalList.find("!") >= 0:
             ans.append((name,time))
     if not ans:
