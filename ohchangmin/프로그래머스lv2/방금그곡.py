@@ -24,7 +24,6 @@ def solution(m, musicinfos):
                 ind += 1
             if ind == len(music):
                 ind = 0
-
  
         for i in range(0, len(melody) - len(m)+1):
             if melody[i] == '#':
@@ -35,6 +34,7 @@ def solution(m, musicinfos):
                     continue
                 answer = title
                 max_time = time
+    
     if answer == '':
         return "(None)"
     return answer

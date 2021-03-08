@@ -31,8 +31,8 @@ def solution(cacheSize, cities):
         print(d)
     return answer
 
-cacheSize = 2
-cities = ["Jeju", "Pangyo", "NewYork", "newyork"]
+cacheSize = 3
+cities = ["Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"]
 print(solution(cacheSize, cities))
 
 
