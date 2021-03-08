@@ -8,6 +8,7 @@ def makeSub(strs):
         if re.match("[a-z][a-z]",subString):
             subList.append(subString)
     return subList
+
 def solution(str1,str2):
     str1List = makeSub(str1)
     # print(str1List)
@@ -20,14 +21,11 @@ def solution(str1,str2):
 
     uniSet = set(str1List).union(str2List)
     insSet = set(str1List).intersection(str2List)
-
     for i in insSet:
         ins += min(count1[i],count2[i])
     # print(ins)
-
     for u in uniSet:
         uni += max(count1[u],count2[u])
-    
     # print(uni)
     if uni == 0:
         return 65536
