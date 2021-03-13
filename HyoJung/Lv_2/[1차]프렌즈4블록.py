@@ -5,8 +5,8 @@ def makeDown(m, n, board, visited):
             if visited[i][j]!=0 and board[i][j]!='-':
                 s_block.append(board[i][j])
         i = m-1
-        for k in range(len(s_block)):
-            board[i][j]=s_block.pop(-1)
+        for k in range(len(s_block)-1,-1,-1):
+            board[i][j]=s_block[k]
             i-=1
         while i>=0:
             if board[i][j]=='-': break
@@ -37,9 +37,10 @@ def solution(m, n, maps):
     visited, board = init(m,n,maps)
 
     while(True):
+        cnt = 0
         visited, judge = findSquare(m, n, board, visited, judge)
         if judge==False: break
-        board = makeDown(m, n, board, visited)
+        board= makeDown(m, n, board, visited)
         visited, judge = [[-1]*n for i in range(m)], False
     
     for i in board: answer+=i.count('-')
