@@ -40,8 +40,8 @@ def solution(m, musicinfos):
             sequence += 1
 
     if not answer:
-        return "(None)"
-    answer.sort(key= lambda x: (x[0],x[2]))
+        return '(None)'
+    answer.sort(key= lambda x: (-x[0],x[2]))
     return answer[0][1]
 
 print(solution(	"CCB", ["03:00,03:10,FOO,CCB#CCB", "04:00,04:08,BAR,ABC"]))
