@@ -51,7 +51,6 @@ def solution(n):
     end = time.time()
     print(end-start)
     return answer
-
 print(solution(999999))
 '''
     1.  n의 2진수 리스트 b 구하기
@@ -61,6 +60,7 @@ print(solution(999999))
     
     3.  (ㄱ) 0이 있으면
         (ㄴ) 0의 index -> Idx 라 하면 b[Idx:] 에서 1 이 있는지 확인
+        
             ex) 1,1,1,0,0,0 or 1,1,1,1,0 or 1,1,0,0,0,0 같은 부류를 찾기 위함
             없으면 위와 같은 것들이므로 b.append(0) 하고
             answer = b[0:1] + reversed(b[1:])
@@ -79,6 +79,5 @@ print(solution(999999))
 
         (ㅁ) b[c]와 b[c+1]을 바꾸고
              b = b[:c+1] +   { b[c+1:] 중에서 0,1의 개수를 파악하여 0*0의 개수, 1*1의 개수 만큼 추가해준 리스트}
-
     
 '''

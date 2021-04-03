@@ -7,8 +7,8 @@ def solution(dirs):
 
     for dir in dirs:
         value = direction_dict[dir]
-        x_for_calculation = point_now[0] + value[0] ## 임시 x좌표
-        y_for_calculation =  point_now[1] + value[1] ## 임시 y좌표
+        x_for_calculation = point_now[0] + value[0] ## 계산하였을 때의 임시 x좌표
+        y_for_calculation =  point_now[1] + value[1] ## 계산하였을 때의 임시 y좌표
 
         if x_for_calculation < -5 or x_for_calculation > 5 or \ 
             y_for_calculation < -5 or y_for_calculation > 5: ## x,y가 -5~5 를 벗어나면 skip
