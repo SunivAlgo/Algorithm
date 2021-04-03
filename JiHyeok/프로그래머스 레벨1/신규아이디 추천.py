@@ -51,3 +51,8 @@ print(solution("=.="))
 print(solution("123_.def"))
 print(solution("abcdefghijklmn.p"))
 print(solution('a.b.c.d.'))
+
+'''
+그저 단계별 설명대로 코딩하였음
+
+'''

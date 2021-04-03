@@ -2,6 +2,8 @@
 def solution(m, musicinfos):
     answer = ''
     new_m = ''
+
+    ##  m 에서 #이 붙어있는 계이름은 소문자로 변경
     for i in range(len(m)):
         if m[i] == '#':
             continue
@@ -13,6 +15,8 @@ def solution(m, musicinfos):
             continue
         new_m += m[i]
 
+    ##  dic_song 이라는 dict에는
+    ##  title : [start_time,end_time,time,songinfo]
     dic_song = dict()
     musicinfos = [musicinfo.split(',') for musicinfo in musicinfos]
     
