@@ -34,8 +34,6 @@ def adj_Padding(lock,n,keys,m):
                     return True
     return False
                     
-
-
 def solution(key,lock):
     m = len(key)
     n = len(lock)
