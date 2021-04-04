@@ -25,10 +25,6 @@ def solution(s):
     
     return answer
 
-
-
-
-    
 print(solution("{{2},{2,1},{2,1,3},{2,1,3,4}}"))
 print(solution("{{123}}"))
 print(solution("{{4,2,3},{3},{2,3,4,1},{2,3}}"))

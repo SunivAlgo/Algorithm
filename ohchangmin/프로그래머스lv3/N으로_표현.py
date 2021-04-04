@@ -22,12 +22,13 @@ def solution(N, number):
                         d[i + j].add(k // l)
             if number in d[i + j]:  #만든 set에 number가 있다면 return 하고 끝
                 return i+j
-
+    for i in d:
+        print(d[i])
     return -1
 
 
-print(solution(5, 5))
-print(solution(5, 12))
+#print(solution(5, 5))
+#print(solution(5, 12))
 print(solution(5, 31168))
-print(solution(5, 22))
-print(solution(5, 4))
+#print(solution(5, 22))
+#print(solution(5, 4))
