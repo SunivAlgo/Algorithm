@@ -20,13 +20,14 @@ def solution(n, costs):
     0 1 8 0
     '''
     
+    
 
     for cost in costs:
         a, b, value = cost[0], cost[1], cost[2]
         costmap[a][b], costmap[b][a] = value, value
     
 
-
+    print(costmap)
     connected_island_list = [] ## 현재 연결된 섬들을 나타내는 리스트
 
     while(len(connected_island_list) < n): ## connected_island_list == n 일시 모든 섬이 연결된 것이므로 끝
