@@ -15,7 +15,7 @@ def solution(routes):
             if routes[j][0] <= routes[i][1]: ## 시작점이 routes[i][1] 보다 작으면 skip에 넣음
                 routeidx_for_skip.append(j)
         answer += 1 ## answer 증가
-
+    
 
 
         
