@@ -1,5 +1,4 @@
 def solution(m, n, puddles):
-    answer = 0
     road = []
     for _ in range(n):
         road.append([0 for _ in range(m)])
