@@ -18,7 +18,7 @@ def solution(begin, target, words):
     while que:
         word = que.popleft()
         if target == word[-1]:
-            return len(word)
+            return len(word) - 1
         for i in range(len(words)):
             if words[i] in word:
                 continue
