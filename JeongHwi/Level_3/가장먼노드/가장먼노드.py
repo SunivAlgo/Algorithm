@@ -5,9 +5,10 @@ def bfs(graph,visit,start):
     q = deque()
     q.append(start)
     visit[start] = 1
-    max_node = 1
+    max_node = 1 # 깊이
     while q:
         now = q.popleft()
+        print(visit)
         for next_node in graph[now]:
             if visit[next_node] == 0:
                 visit[next_node] = visit[now]+1
@@ -15,6 +16,7 @@ def bfs(graph,visit,start):
                 q.append(next_node)
             else:
                 continue
+        
     return visit.count(max_node)
     
 def solution(n,edge):
@@ -30,7 +32,7 @@ def solution(n,edge):
             graph[b] = [a]
         else:
             graph[b].append(a)
-    
+    print(graph)
     visit = [0 for _ in range(n+1)]
     return bfs(graph,visit,1)
 

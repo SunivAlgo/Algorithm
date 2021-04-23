@@ -16,8 +16,8 @@ def solution(operations):
             if not heap:
                 continue
             if num == "1":
-                hq._heapify_max(heap)
-                hq._heappop_max(heap)
+                hq._heapify_max(heap) # O(nlogn)
+                hq._heappop_max(heap) 
 
             elif num == "-1":
                 hq.heapify(heap)

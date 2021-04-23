@@ -12,6 +12,7 @@ def back(now,ticket,count_Tic,ticket_len,count,route):
         way = copy.deepcopy(route)
         answer.append(way)
         return True
+
     if now in ticket:
         for next_airport in ticket[now]:
             if count_Tic[next_airport] == 0: # 더 이상 다음 공항에 도착할 티켓이 없는 경우
@@ -20,10 +21,11 @@ def back(now,ticket,count_Tic,ticket_len,count,route):
                 
             route.append(next_airport)
             count_Tic[next_airport]-=1
-            back(next_airport,ticket,count_Tic,ticket_len,count+1,route)
+
+            if back(next_airport,ticket,count_Tic,ticket_len,count+1,route):
+                return True
             route.pop()
             count_Tic[next_airport]+=1
-    
 
 def solution(tickets):
     ticket = {}
@@ -52,27 +54,25 @@ def solution(tickets):
 # print(solution([['ICN','AAA'],['ICN','AAA'],['ICN','AAA'],['AAA','ICN'],['AAA','ICN']]))
 # print(solution([["ICN", "A"], ["ICN", "B"], ["B", "ICN"]]))
 
-# print(solution([["ICN", "JFK"], ['HND', 'IAD'], ['JFK', 'HND']]), "\n",['ICN', 'JFK', 'HND', 'IAD'])
-# answer= []
-# print(solution([['ICN', 'SFO'], ['ICN', 'ATL'], ['SFO', 'ATL'], ['ATL', 'ICN'], [ 'ATL', 'SFO']]), "\n",['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO'])
-# answer= []
-# print(solution([['ICN', 'B'], ['B', 'ICN'], ['ICN', 'A'], [ 'A', 'D'], ['D', 'A']]), "\n",['ICN', 'B', 'ICN', 'A', 'D', 'A'])
-# answer= []
-# print(solution([['ICN', 'SFO'], ['SFO', 'ICN'], ['ICN', 'SFO'],['SFO', 'JFK']]), "\n",['ICN', 'SFO', 'ICN', 'SFO', 'JFK'])
-# answer= []
-# print(solution([['ICN', 'A'], ['ICN', 'A'], ['A', 'ICN'],['A', 'C']]), "\n",['ICN', 'A', 'ICN', 'A', 'C'])
-# answer= []
-# print(solution([['ICN', 'A'], ['A', 'ICN'], ['A', 'B'],['ICN', 'A']]), "\n",['ICN', 'A', 'ICN', 'A', 'B'])
-# answer= []
-# print(solution([['ICN', 'BBB'], ['AAA', 'ICN'], ['ICN', 'AAA']]),"\n",['ICN', 'AAA', 'ICN', 'BBB'])
-# answer= []
-# print(solution([['ICN', 'ABB'], ['AAA', 'ICN'], ['ICN', 'AAA'], ['ICN', 'ADD'], [ 'ABB', 'ICN']]), "\n",['ICN', 'AAA', 'ICN', 'ABB', 'ICN', 'ADD'])
-# answer= []
-# print(solution([['ICN', 'AAA'], ['ICN', 'AAA'], ['AAA', 'ICN'],['AAA', 'CCC']]), "\n",['ICN', 'AAA', 'ICN', 'AAA', 'CCC'])
-# answer= []
+print(solution([["ICN", "JFK"], ['HND', 'IAD'], ['JFK', 'HND']]), "\n",['ICN', 'JFK', 'HND', 'IAD'])
+answer= []
+print(solution([['ICN', 'SFO'], ['ICN', 'ATL'], ['SFO', 'ATL'], ['ATL', 'ICN'], [ 'ATL', 'SFO']]), "\n",['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO'])
+answer= []
+print(solution([['ICN', 'B'], ['B', 'ICN'], ['ICN', 'A'], [ 'A', 'D'], ['D', 'A']]), "\n",['ICN', 'B', 'ICN', 'A', 'D', 'A'])
+answer= []
+print(solution([['ICN', 'SFO'], ['SFO', 'ICN'], ['ICN', 'SFO'],['SFO', 'JFK']]), "\n",['ICN', 'SFO', 'ICN', 'SFO', 'JFK'])
+answer= []
+print(solution([['ICN', 'A'], ['ICN', 'A'], ['A', 'ICN'],['A', 'C']]), "\n",['ICN', 'A', 'ICN', 'A', 'C'])
+answer= []
+print(solution([['ICN', 'A'], ['A', 'ICN'], ['A', 'B'],['ICN', 'A']]), "\n",['ICN', 'A', 'ICN', 'A', 'B'])
+answer= []
+print(solution([['ICN', 'BBB'], ['AAA', 'ICN'], ['ICN', 'AAA']]),"\n",['ICN', 'AAA', 'ICN', 'BBB'])
+answer= []
+print(solution([['ICN', 'ABB'], ['AAA', 'ICN'], ['ICN', 'AAA'], ['ICN', 'ADD'], [ 'ABB', 'ICN']]), "\n",['ICN', 'AAA', 'ICN', 'ABB', 'ICN', 'ADD'])
+answer= []
+print(solution([['ICN', 'AAA'], ['ICN', 'AAA'], ['AAA', 'ICN'],['AAA', 'CCC']]), "\n",['ICN', 'AAA', 'ICN', 'AAA', 'CCC'])
+answer= []
 print(solution([['ICN', 'AAA'], ['ICN', 'AAA'], ['ICN', 'AAA'],['AAA', 'ICN'], ['AAA', 'ICN']]), "\n", ['ICN', 'AAA', 'ICN', 'AAA', 'ICN', 'AAA'])
 answer= []
-# print(solution([["ICN", "A"], ["ICN", "B"], ["B", "ICN"]]),"\n",["ICN", "B", "ICN", "A"])
-
-# print(solution([['ICN','A'],['A','B'],['A','C'],['C','A'],['B','D']]))
-print(solution([["ICN","A"],["ICN","A"],["A","B"]]))
+print(solution([["ICN", "A"], ["A", "C"], ["A", "D"], ["D", "B"], ["B", "A"]]),"\n", ["ICN", "A", "D", "B", "A", "C"])
+answer=[]
